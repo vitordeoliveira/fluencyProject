@@ -2,3 +2,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.refresh {
+  margin: 15px auto;
+  width: 40%;
+}

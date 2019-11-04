@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const runEffect = async () => {
       const { data } = await axios.get(
-        "https://api.github.com/users?since=1000"
+        `https://api.github.com/users?since=${Math.random() * (1000 - 1) + 1}`
       );
       setstate(data);
     };
@@ -18,6 +18,7 @@ const Home = () => {
 
   return (
     <div>
+      <h1 className="refresh"> Randow users F5 from refresh</h1>
       <ul className="grid-template-4">
         {state.map(doc => (
           <FlipCard user={doc}></FlipCard>
